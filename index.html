@@ -45,32 +45,39 @@
     <!-- Main Section Starts Here -->
     <section class="w-11/12 mx-auto mt-8">
         <div class="space-y-3 flex flex-col items-center justify-center">
-            <p class="font-semibold text-slate-500">Bringing Families Together <i class="fa-solid fa-square"></i></p>
-            <h1 class="font-bold text-5xl">Your Path to Adoption Starts Here</h1>
-            <p class="text-xs">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
-            <a href="" class="btn bg-cyan-700 text-white">View More</a>
+            <p class="font-semibold text-center text-slate-500">Bringing Families Together <i class="fa-solid fa-square"></i></p>
+            <h1 class="font-bold text-center text-5xl">Your Path to Adoption Starts Here</h1>
+            <p class="text-xs text-center">Your Path to Adoption Starts Here" offers guidance and support for individuals or families beginning their adoption journey with confidence.</p>
+            <a href="#bottom" class="btn bg-cyan-700 text-white">View More</a>
             <img class="w-fit" src="./images/pet.webp" alt="dog images">
-            <h2 class="font-bold text-3xl">Adopt Your Best Friend</h2>
-            <p class="text-xs text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <h2 class="font-bold text-3xl text-center">Adopt Your Best Friend</h2>
+            <p class="text-xs text-gray-400 text-center">Adopt Your Best Friend" encourages finding a loyal companion through pet adoption, offering love, companionship, and a forever home.</p>
         </div>
     </section>
     <!-- Display Section Starts Here -->
-    <section class="w-11/12 mx-auto mt-8 space-y-8">
-        <div id="categories-container" class="flex justify-between"></div>
+    <section id="bottom" class="w-11/12 mx-auto mt-8 space-y-8">
+        <div id="categories-container" class="lg:flex lg:justify-between space-y-3"></div>
         <div class="flex justify-between items-center">
             <p class="font-bold">Best Deal For You</p>
             <a href="" id="sortDE"  class="btn bg-cyan-700 text-white">Sort by Price</a>
         </div>
-        <div class="flex justify-between gap-2 items-start">
-            <div id="pets_container"></div>
-            <div class="hidden-border w-[30%] rounded grid grid-cols-2 gap-1 p-2 fav-container"></div>
+        <div id="spinner" class="flex justify-center hidden">
+            <span class="loading loading-bars loading-lg"></span>
         </div>
+        <div class="lg:flex lg:justify-between lg:gap-2 items-start">
+            <div id="pets_container"></div>
+            <div class="hidden-border lg:w-[30%] w-full rounded grid grid-cols-2 gap-1 p-2 fav-container"></div>
+        </div>
+        <!-- Open the modal using ID -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box"></div>
+        </dialog>
     </section>
     <!-- Display Section Ends Here -->
     <!-- Main Section Ends Here -->
     <!-- Footer Starts Here -->
     <footer class="footer bg-black pt-10 pb-10 mt-8">
-        <div class="w-11/12 mx-auto flex justify-between">
+        <div class="w-11/12 mx-auto lg:flex flex-cols lg:space-y-0 space-y-10 justify-between">
             <nav class="text-white space-y-2">
                 <div class="flex items-center">
                     <img class="h-6 w-6" src="./images/logo.webp" alt="peddy website logo">

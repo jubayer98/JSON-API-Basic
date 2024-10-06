@@ -12,15 +12,17 @@ const loadCategories = () => {
     .catch(error => console.error("Error fetching the categories:", error));
 }
 
+let petsData = [];
 // Load all pets from API
 const loadPets = () => {
     fetch("https://openapi.programming-hero.com/api/peddy/pets")
     .then(response => response.json())
     .then(data => {
         if (data.status && data.pets) {
-            displayPets(data.pets);
+            petsData = data.pets;
+            displayPets(petsData);
         } else {
-            console.error("Failed to load pets:", data.message);
+            console.error("Failed to load pets:", petsData.message);
         }
     })
     .catch(error => console.error("Error fetching the pets:", error));
@@ -33,9 +35,10 @@ const loadPetsByCategory = category => {
     .then(response => response.json())
     .then(data => {
         if (data.status && data.data) {
-            displayPets(data.data);
+            petsData = data.data;
+            displayPets(petsData);
         } else {
-            console.error("Failed to load pets:", data.message);
+            console.error("Failed to load pets:", petsData.message);
         }
     })
     .catch(error => console.error("Error fetching the pets:", error));
@@ -77,13 +80,26 @@ const displayPets = pets => {
     if (pets.length === 0) {
         // Display a message and image if no pets are found
         const noDataDiv = document.createElement("div");
+        noDataDiv.className = "hero bg-base-200 w-11/12 mx-auto";
         noDataDiv.innerHTML = `
-            <img src="./images/error.webp" alt="No Data">
-            <p class="font-bold text-xl mt-5">No pets found in this category.</p>
+            <div class="hero-content w-screen">
+                <div class="max-w-md mx-auto flex flex-col justify-center items-center space-y-3">
+                    <div class="flex justify-center items-center">
+                        <img src="./images/error.webp">
+                    </div>
+                    <div class="text-center">
+                        <h2 class="font-bold text-xl">No Information Available</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using that it has a.</p>
+                    </div>
+                </div>
+            </div>
         `;
         container.appendChild(noDataDiv);
+        // Remove grid classes when there are no pets
+        container.className = "";
     } else {
-        // Iterate over each pet and create its display card
+        // Apply grid classes and display pets
+        container.className = "w-[70%] grid grid-cols-3 gap-1";
         pets.forEach(pet => {
             const div = document.createElement("div");
             div.className = "border-2 rounded p-2 mb-2 mr-2";
@@ -117,8 +133,8 @@ const displayPets = pets => {
             favContainer.appendChild(img);
 
             if (favContainer.children.length > 0) {
-                favContainer.classList.remove('hidden-border');
-                favContainer.classList.add('border-2');
+                favContainer.classList.remove("hidden-border");
+                favContainer.classList.add("border-2");
             }
         });
     });
@@ -126,6 +142,18 @@ const displayPets = pets => {
 
 // Helper function to handle possibly undefined or null values
 const displayValue = value => value ? value : "Not Available";
+
+// Sort descending order function
+document.getElementById("sortDE").addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor click behavior
+
+    // Sort the pets by price in descending order
+    petsData.sort((a, b) => b.price - a.price);
+
+    // Display the sorted pets
+    displayPets(petsData);
+});
+
 
 // Initialize categories and pets on page load
 document.addEventListener('DOMContentLoaded', () => {

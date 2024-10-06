@@ -1,11 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/050b9a6fb1.js" crossorigin="anonymous"></script>
+    <style>
+        .font-manrope
+        {
+            font-family: "Manrope", sans-serif;
+        }
+     </style>
     <title>Peddy</title>
 </head>
-<body>
-    
+<body class="font-manrope bg-white">
+    <!-- Navbar Starts Here -->
+    <nav class="w-11/12 mx-auto">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <img class="w-6" src="./images/logo.webp" alt="peddy website logo">
+                <a class="btn btn-ghost text-xl font-bold">Peddy</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ends Here -->
+    <!-- Main Section Starts Here -->
+    <section class="w-11/12 mx-auto mt-8">
+        <div class="space-y-3 flex flex-col items-center justify-center">
+            <p class="font-semibold text-slate-500">Bringing Families Together <i class="fa-solid fa-square"></i></p>
+            <h1 class="font-bold text-5xl">Your Path to Adoption Starts Here</h1>
+            <p class="text-xs">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <a href="" class="btn bg-cyan-700 text-white">View More</a>
+            <img class="w-fit" src="./images/pet.webp" alt="dog images">
+            <h2 class="font-bold text-3xl">Adopt Your Best Friend</h2>
+            <p class="text-xs text-gray-400">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        </div>
+    </section>
+    <!-- Display Section Starts Here -->
+    <section class="w-11/12 mx-auto mt-8 space-y-8">
+        <div class="flex justify-between">
+            <p class="font-bold text-lg border-2 rounded inline-block px-9 py-3"><i class="fa-duotone fa-solid fa-dog text-orange-400"></i> Dogs</p>
+            <p class="font-bold text-lg border-2 rounded inline-block px-9 py-3"><i class="fa-solid fa-cat text-red-500"></i> Cats</p>
+            <p class="font-bold text-lg border-2 rounded inline-block px-9 py-3"><i class="fa-solid fa-shield-cat text-amber-800"></i></i> Rabbits</p>
+            <p class="font-bold text-lg border-2 rounded inline-block px-9 py-3"><i class="fa-solid fa-kiwi-bird text-green-600"></i> Birds</p>
+        </div>
+        <div class="flex justify-between">
+            <p class="font-bold">Best Deal For You</p>
+            <a href="" class="btn bg-cyan-700 text-white">Sort by Price</a>
+        </div>
+        <div class="flex justify-between gap-5 items-start">
+            <div class="border-2 w-[70%] grid grid-cols-3 gap-1">
+                <div class="border-2 m-2 rounded p-2">
+                    <img src="./images/pet.webp" class="object-cover h-48 w-56 rounded" alt="">
+                    <p class="font-bold">Pet Name</p>
+                    <div class="text-xs text-gray-500">
+                        <p><i class="fa-solid fa-table-cells-large"></i> Breed: Breed Name</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Birth: 2024</p>
+                        <p><i class="fa-solid fa-mercury"></i> Gender: Male</p>
+                        <p><i class="fa-solid fa-tag"></i> Price: $100</p>
+                    </div>
+                    <hr class="mt-1">
+                    <div class="flex space-x-2 justify-center items-center text-xs mt-2">
+                        <p class="border-2 px-2 text-cyan-700"><i class="fa-solid fa-thumbs-up"></i></p>
+                        <p class="border-2 px-2 text-cyan-700">Adopt</p>
+                        <p class="border-2 px-2 text-cyan-700">Details</p>
+                    </div>
+                </div>
+                <div class="border-2 m-2 rounded p-2">
+                    <img src="./images/pet.webp" class="object-cover h-48 w-56 rounded" alt="">
+                    <p class="font-bold">Pet Name</p>
+                    <div class="text-xs text-gray-500">
+                        <p><i class="fa-solid fa-table-cells-large"></i> Breed: Breed Name</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Birth: 2024</p>
+                        <p><i class="fa-solid fa-mercury"></i> Gender: Male</p>
+                        <p><i class="fa-solid fa-tag"></i> Price: $100</p>
+                    </div>
+                    <hr class="mt-1">
+                    <div class="flex space-x-2 justify-center items-center text-xs mt-2">
+                        <p class="border-2 px-2 text-cyan-700"><i class="fa-solid fa-thumbs-up"></i></p>
+                        <p class="border-2 px-2 text-cyan-700">Adopt</p>
+                        <p class="border-2 px-2 text-cyan-700">Details</p>
+                    </div>
+                </div>
+                <div class="border-2 m-2 rounded p-2">
+                    <img src="./images/pet.webp" class="object-cover h-48 w-56 rounded" alt="">
+                    <p class="font-bold">Pet Name</p>
+                    <div class="text-xs text-gray-500">
+                        <p><i class="fa-solid fa-table-cells-large"></i> Breed: Breed Name</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Birth: 2024</p>
+                        <p><i class="fa-solid fa-mercury"></i> Gender: Male</p>
+                        <p><i class="fa-solid fa-tag"></i> Price: $100</p>
+                    </div>
+                    <hr class="mt-1">
+                    <div class="flex space-x-2 justify-center items-center text-xs mt-2">
+                        <p class="border-2 px-2 text-cyan-700"><i class="fa-solid fa-thumbs-up"></i></p>
+                        <p class="border-2 px-2 text-cyan-700">Adopt</p>
+                        <p class="border-2 px-2 text-cyan-700">Details</p>
+                    </div>
+                </div>
+                <div class="border-2 m-2 rounded p-2">
+                    <img src="./images/pet.webp" class="object-cover h-48 w-56 rounded" alt="">
+                    <p class="font-bold">Pet Name</p>
+                    <div class="text-xs text-gray-500">
+                        <p><i class="fa-solid fa-table-cells-large"></i> Breed: Breed Name</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> Birth: 2024</p>
+                        <p><i class="fa-solid fa-mercury"></i> Gender: Male</p>
+                        <p><i class="fa-solid fa-tag"></i> Price: $100</p>
+                    </div>
+                    <hr class="mt-1">
+                    <div class="flex space-x-2 justify-center items-center text-xs mt-2">
+                        <p class="border-2 px-2 text-cyan-700"><i class="fa-solid fa-thumbs-up"></i></p>
+                        <p class="border-2 px-2 text-cyan-700">Adopt</p>
+                        <p class="border-2 px-2 text-cyan-700">Details</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-2 w-[30%] grid grid-cols-2 gap-1 p-2">
+                <img src="./images/pet.webp" class="object-cover h-48 w-48 rounded" alt="">
+                <img src="./images/pet.webp" class="object-cover h-48 w-48 rounded" alt="">
+                <img src="./images/pet.webp" class="object-cover h-48 w-48 rounded" alt="">
+                <img src="./images/pet.webp" class="object-cover h-48 w-48 rounded" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Display Section Ends Here -->
+    <!-- Main Section Ends Here -->
+    <!-- Footer Starts Here -->
+    <footer class="footer bg-black pt-10 pb-10 mt-8">
+        <div class="w-11/12 mx-auto flex justify-between">
+            <nav class="text-white space-y-2">
+                <div class="flex items-center">
+                    <img class="h-6 w-6" src="./images/logo.webp" alt="peddy website logo">
+                    <a class="btn btn-ghost text-xl font-bold">Peddy</a>
+                </div>
+                <p>Location: Dhaka, Bangladesh</p>
+                <p>Phone: +123 1234 12345</p>
+                <p>Email: info@peddy.com</p>
+                <p>Opening Hour: 09:00 - 17:00</p>
+                <div class="space-x-8">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-youtube"></i>
+                </div>
+            </nav>
+            <nav class="text-white flex flex-col space-y-2">
+                <h6 class="font-bold text-xl">Useful Links</h6>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">About Us</a>
+                <a class="link link-hover">Animals</a>
+                <a class="link link-hover">Foundation</a>
+                <a class="link link-hover">Contact</a>
+            </nav>
+            <nav class="text-white flex flex-col space-y-2">
+                <h6 class="font-bold text-xl">Drop A Message</h6>
+                <input class="bg-gray-900 rounded p-2" type="email" placeholder="Enter your email">
+                <a href="" class="btn bg-cyan-700 text-white border-none">Subscribe</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- Footer Ends Here -->
 </body>
 </html>

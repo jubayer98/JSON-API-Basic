@@ -23,7 +23,7 @@ This project utilizes several ES6 features to write cleaner and more efficient c
 - Template literals for multi-line strings and dynamic expressions.
 
 ## Live Demo
-Check out the live version of my pet adoption website here: [Live Demo]([http://example.de](https://deft-gumdrop-d32187.netlify.app/))
+Check out the live version of my pet adoption website here: [Live Demo]([https://deft-gumdrop-d32187.netlify.app/])
 
 ## How to Use
 1. **Navigate to the Website**: Open the live demo link.
